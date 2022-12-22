@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
 import 'area_age.dart';
 import 'area_info.dart';
 import 'coding.dart';
+import 'download_resume.dart';
+import 'knowledge.dart';
 import 'my_info.dart';
 import 'skills.dart';
 
@@ -27,6 +30,8 @@ class SideMenu extends StatelessWidget {
                   Skills(),
                   SizedBox(height: defaultPadding),
                   Coding(),
+                  Knowledge(),
+                  DownloadResume(),
                 ],
               ),
             ),
