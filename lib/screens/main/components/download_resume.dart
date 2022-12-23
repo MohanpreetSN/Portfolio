@@ -19,7 +19,7 @@ class DownloadResume extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  "Download Resume",
+                  "Download Résumé",
                   style: TextStyle(color: primaryColor),
                 ),
                 SizedBox(width: defaultPadding / 2),

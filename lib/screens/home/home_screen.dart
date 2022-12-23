@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 
 import '../main/main_screen.dart';
+import 'components/highlight_info.dart';
 import 'components/home_banner.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,7 +11,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainScreen(
-      children: [HomeBanner()],
+      children: [
+        HomeBanner(),
+        HighlightInfo(),
+      ],
     );
   }
 }
