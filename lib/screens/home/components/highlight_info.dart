@@ -17,9 +17,9 @@ class HighlightInfo extends StatelessWidget {
         children: [
           HighLight(val: 3, text: "+", label: "Years of Experience"),
           HighLight(val: 10, text: "+", label: "Projects"),
-          //const SizedBox(height: defaultPadding),
           HighLight(val: 3, text: "", label: "APIs"),
-          HighLight(val: 2, text: "", label: "Original UI Designs")
+          HighLight(val: 2, text: "", label: "Original UI Designs"),
+          //const SizedBox(width: defaultPadding),
         ],
       ),
     );

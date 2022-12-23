@@ -6,7 +6,7 @@ class Project {
 
 List<Project> demo_projects = [
   Project(
-    title: "Portfolio",
+    title: "Portfolio WebApp",
     description:
         "The webapp you are looking at right now. This is responsive and can be displayed on a desktop or mobile phone screen of any size. Feel free to resize your browser to check out the responsiveness!",
   ),

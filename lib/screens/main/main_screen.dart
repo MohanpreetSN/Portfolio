@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 
 import 'components/side_menu.dart';
 
@@ -17,10 +18,11 @@ class MainScreen extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                flex: 2,
-                child: SideMenu(),
-              ),
+              if (Responsive.isDesktop(context))
+                Expanded(
+                  flex: 2,
+                  child: SideMenu(),
+                ),
               SizedBox(width: defaultPadding),
               Expanded(
                 flex: 7,
