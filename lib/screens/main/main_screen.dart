@@ -12,6 +12,20 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: Responsive.isDesktop(context)
+          ? null
+          : AppBar(
+              backgroundColor: bgColor,
+              leading: Builder(
+                builder: (context) => IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                ),
+              ),
+            ),
+      drawer: SideMenu(),
       body: Center(
         child: Container(
           constraints: BoxConstraints(maxWidth: maxWidth),
@@ -27,8 +41,11 @@ class MainScreen extends StatelessWidget {
               Expanded(
                 flex: 7,
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [...children],
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: defaultPadding),
+                    child: Column(
+                      children: [...children],
+                    ),
                   ),
                 ),
               ),

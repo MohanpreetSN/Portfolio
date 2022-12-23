@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constants.dart';
 import '../../../models/Project.dart';
@@ -30,8 +31,9 @@ class ProjectCard extends StatelessWidget {
           Spacer(),
           Text(
             project.description!,
-            maxLines: (Responsive.isDesktop(context) &&
-                    MediaQuery.of(context).size.width < 1045)
+            maxLines: ((Responsive.isDesktop(context) &&
+                        MediaQuery.of(context).size.width < 1045) ||
+                    Responsive.isMobileLarge(context))
                 ? 3
                 : 4,
             overflow: TextOverflow.ellipsis,
@@ -39,7 +41,7 @@ class ProjectCard extends StatelessWidget {
           ),
           Spacer(),
           TextButton(
-            onPressed: () {},
+            onPressed: () => _launchUrl(project.link),
             child: Text(
               "Explore >>",
               style: TextStyle(color: primaryColor),
@@ -48,5 +50,12 @@ class ProjectCard extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+Future<void> _launchUrl(urlString) async {
+  final Uri _url = Uri.parse(urlString);
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
   }
 }
