@@ -8,6 +8,7 @@ class MainScreen extends StatelessWidget {
   const MainScreen({Key? key, required this.children}) : super(key: key);
 
   final List<Widget> children;
+  //NOTE: ADD LANGUAGES SECTION
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_profile/file_downloader.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
@@ -14,7 +15,7 @@ class DownloadResume extends StatelessWidget {
       children: [
         Divider(),
         TextButton(
-          onPressed: () {},
+          onPressed: () => downloadFile(),
           child: FittedBox(
             child: Row(
               children: [
@@ -35,3 +36,4 @@ class DownloadResume extends StatelessWidget {
     );
   }
 }
+//https://drive.google.com/uc?export=download&id=1RQHdAhfjX4tg4kRkX5RGkuJdeo9yQYPB

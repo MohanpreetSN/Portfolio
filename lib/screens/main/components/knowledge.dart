@@ -25,6 +25,7 @@ class Knowledge extends StatelessWidget {
         KnowledgeText(text: "Firebase, Django, SQL"),
         KnowledgeText(text: "Stripe Integration"),
         KnowledgeText(text: "Python, PySpark, Scala"),
+        KnowledgeText(text: "C, C++, MATLAB and R"),
         KnowledgeText(text: "GIT knowledge"),
       ],
     );

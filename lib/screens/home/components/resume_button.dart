@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_profile/file_downloader.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
@@ -11,7 +12,7 @@ class ResumeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () => downloadFile(),
       style: TextButton.styleFrom(
         padding: EdgeInsets.symmetric(
           horizontal: defaultPadding,
